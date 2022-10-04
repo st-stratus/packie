@@ -1,0 +1,22 @@
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[project]
+name = "memkeep"
+version = "0.0.23"
+authors = [
+  { name="Stratus", email="devindunnc@gmail.com" },
+]
+description = "Saves variable and lists"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/st-stratus/memkeep"
+"Bug Tracker" = "https://github.com/st-stratus/memkeep/issues"

@@ -1,0 +1,1 @@
+Saves data so you dont have to re-define variables or lists after your script restarts

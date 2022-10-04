@@ -1,0 +1,22 @@
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[project]
+name = "%PNAME%"
+version = "%VERSION%"
+authors = [
+  { name="%USERNAME%", email="%MAIL%" },
+]
+description = "%DESC%"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "%HOMEPAGE%"
+"Bug Tracker" = "%BUGPAGE%"

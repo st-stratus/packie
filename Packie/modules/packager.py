@@ -1,5 +1,6 @@
 import os
 import shutil
+import datetime
 
 def pack(LOC, SMLDES, AUTH, NAME, VERS, HOME, BUG, EMAIL, LGDESC, _REPACK_):
     if _REPACK_:
@@ -22,8 +23,9 @@ def pack(LOC, SMLDES, AUTH, NAME, VERS, HOME, BUG, EMAIL, LGDESC, _REPACK_):
     LIC = f.read()
     f.close()
     f = open(f'packages/{NAME}/LICENSE', 'w')
-    f.write(LIC)
+    f.write(LIC.replace('%YR%', str(datetime.date.today().year)))
     f.close()
     os.chdir(f'packages/{NAME}')
     os.system('py -m build')
     os.chdir('..')
+

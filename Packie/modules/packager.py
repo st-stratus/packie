@@ -28,4 +28,3 @@ def pack(LOC, SMLDES, AUTH, NAME, VERS, HOME, BUG, EMAIL, LGDESC, _REPACK_):
     os.chdir(f'packages/{NAME}')
     os.system('py -m build')
     os.chdir('..')
-

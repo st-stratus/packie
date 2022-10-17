@@ -14,6 +14,8 @@ TXT = Label(win, text='PACKIE')
 TXT.configure()
 TXT.place(x=320, y=60)
 
+modules.modules.check_update
+
 def upload(name, user, passw): 
     try:
         modules.modules.uploader.upload(name, user, passw)
@@ -155,11 +157,10 @@ LDP = Button(win, text='Load Preset', command=load)
 LDP.configure(bg='#345eeb', width=9, height=2)
 LDP.place(x=3, y=210)
 
-
-
-
-
-
+UPD = Label(win, text='Update Available!\nhttps://github.com/st-stratus/packie')
+UPD.configure(height=2)
+if modules.modules.check_update.update:
+    UPD.place(x=3, y=280)
 
 
 win.mainloop()
